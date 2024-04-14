@@ -1,13 +1,15 @@
-# Solicita um número inteiro ao usuário
-numero = input("Digite um número inteiro: ")
+def soma_digitos(numero):
+    soma = 0
+    while numero > 0:
+        digito = numero % 10
+        soma += digito
+        numero //= 10
+    return soma
 
-# Inicializa a soma dos dígitos
-soma = 0
+def main():
+    numero = int(input("Digite um número inteiro: "))
+    resultado = soma_digitos(numero)
+    print("A soma dos dígitos é:", resultado)
 
-# Intera sobre cada dígito no número
-for digito in numero:
-    # Converte o dígito para inteiro e adiciona à soma
-    soma += int(digito)
-
-# Imprime a soma dos dígitos
-print("A soma dos dígitos é:", soma)
+if __name__ == "__main__":
+    main()
