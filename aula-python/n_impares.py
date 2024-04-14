@@ -1,16 +1,15 @@
-# Solicita o valor de "n" ao usuário
-n = int(input("Digite o valor de n: "))
+def imprimir_impares(n):
+    contador = 0
+    numero = 1
+    while contador < n:
+        if numero % 2 != 0:
+            print(numero, end=" ")
+            contador += 1
+        numero += 1
 
-# Inicializa uma variável para contar os números ímpares
-count = 0
+def main():
+    n = int(input("Digite o valor de n: "))
+    imprimir_impares(n)
 
-# Inicializa uma variável para armazenar o número atual
-num = 1
-
-# Imprime os "n" primeiros números ímpares
-print("Os", n, "primeiros números ímpares são:")
-while count < n:
-    if num % 2 != 0:
-        print(num)
-        count += 1
-    num += 1
+if __name__ == "__main__":
+    main()
